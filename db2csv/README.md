@@ -21,7 +21,7 @@
   docker-compose build db2csv
   docker-compose run -v "${PWD}:/go/src/db2csv" -v"/tmp/export:/tmp/export" db2csv bash
 
-  # Now you can edit from your local editor and run using:
+  ### Now you can edit from your local editor and run using:
     db2csv \
           -debug \
           -server database\
