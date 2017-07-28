@@ -17,11 +17,13 @@
 
 ## Development: 'go' runtime in docker, editing in IDE
 
-  docker-compose up -d database
-  docker-compose build db2csv
-  docker-compose run -v "${PWD}:/go/src/db2csv" -v"/tmp/export:/tmp/export" db2csv bash
+    # Mount the source folders into the docker.
 
-  ### Now you can edit from your local editor and run using:
+    docker-compose up -d database
+    docker-compose build db2csv
+    docker-compose run -v "${PWD}:/go/src/db2csv" -v"/tmp/export:/tmp/export" db2csv bash
+
+
     db2csv \
           -debug \
           -server database\

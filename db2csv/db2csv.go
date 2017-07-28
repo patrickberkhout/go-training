@@ -1,7 +1,5 @@
 package main
 
-//https://godoc.org/github.com/lib/pq
-//hello
 import (
 	"database/sql"
 	"flag"
@@ -15,7 +13,6 @@ import (
 	_ "github.com/lib/pq"
 )
 
-//hello]
 
 var (
 	debug = flag.Bool("debug", false, "enable debugging")
