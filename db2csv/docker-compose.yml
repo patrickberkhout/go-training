@@ -1,0 +1,19 @@
+version: '3.0'
+services:
+  database:
+    image: postgres:latest
+    ports:
+      - "5555:5432"
+    environment:
+      POSTGRES_PASSWORD: insecure
+      POSTGRES_USER: demo
+      POSTGRES_DB: demo
+
+  db2csv:
+    build: .
+    environment:
+      DATABASE_HOST: database
+      DATABASE_USER: demo
+      DATABASE_PASSWORD: insecure
+    volumes:
+      - /tmp/export:/tmp/export
